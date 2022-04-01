@@ -25,12 +25,12 @@ public class CustomerController {
     }
 
     @PutMapping("/customers")
-    public void createCustomer(Customer customer){
+    public void createCustomer(@RequestBody Customer customer){
         customerService.insert(customer);
     }
 
     @PutMapping("/customers/update")
-    public void updateCustomer(Customer customer){
+    public void updateCustomer(@RequestBody Customer customer){
         customerService.update(customer);
     }
 
